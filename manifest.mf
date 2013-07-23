@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: com.roomlr.frontend.deploy
+OpenIDE-Module-Localizing-Bundle: com/roomlr/frontend/deploy/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+
