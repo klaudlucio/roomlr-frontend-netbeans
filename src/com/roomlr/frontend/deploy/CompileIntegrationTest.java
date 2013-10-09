@@ -14,21 +14,21 @@ import org.openide.util.Exceptions;
 import org.openide.util.NbBundle.Messages;
 
 @ActionID(
-        category = "Deploy",
-        id = "com.roomlr.frontend.deploy.DeployListener")
+        category = "Build",
+        id = "com.roomlr.frontend.deploy.CompileIntegrationTest")
 @ActionRegistration(
-        iconBase = "com/roomlr/frontend/deploy/foolish-icon.png",
-        displayName = "#CTL_DeployListener")
-@ActionReference(path = "Toolbars/Deploy", position = 0)
-@Messages("CTL_DeployListener=Full deploy (deploy content from test branch)")
-public final class FullDeployListener implements ActionListener {
+        iconBase = "com/roomlr/frontend/deploy/cat-icon.png",
+        displayName = "#CTL_CompileIntegrationTest")
+@ActionReference(path = "Toolbars/Deploy", position = -50)
+@Messages("CTL_CompileIntegrationTest=Compile For Integration Tests (both dev and test including tests)")
+public final class CompileIntegrationTest implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
         Process process = null;
         try {
             // TODO implement action body
-            process = Runtime.getRuntime().exec("python /home/user/NetBeansProjects/roomlr-frontend/deploy/full-deploy.py");
+            process = Runtime.getRuntime().exec("python /home/user/NetBeansProjects/roomlr-frontend-test/deploy/full-deploy.py");
         } catch (IOException ex) {
             Exceptions.printStackTrace(ex);
         }
